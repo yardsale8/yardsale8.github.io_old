@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on lazydata.stream</title>
+    <link>https://yardsale8.github.io/project/</link>
+    <description>Recent content in Projects on lazydata.stream</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Todd Iverson</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/project/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>External Project</title>
+      <link>https://yardsale8.github.io/project/example-external-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://yardsale8.github.io/project/example-external-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tabletoolz</title>
+      <link>https://yardsale8.github.io/project/deep-learning/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://yardsale8.github.io/project/deep-learning/</guid>
+      <description>&lt;p&gt;This module aims to add lazy evaluation of tables through Python
+generators/interators.  The project is inspired by Spark SQL and the dylyr R
+package, which both provide nice tools for processing tables.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
