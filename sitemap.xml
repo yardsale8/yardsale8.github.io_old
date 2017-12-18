@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>https://yardsale8.github.io/post/name_matter/</loc>
+      <lastmod>2017-12-14T00:00:00-06:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://yardsale8.github.io/talk/example-talk/</loc>
       <lastmod>2017-01-01T00:00:00-06:00</lastmod>
     </url>
@@ -86,6 +95,16 @@
     
     <url>
     
+      <loc>https://yardsale8.github.io/tags/.workshop/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://yardsale8.github.io/publication_types/1/</loc>
       <lastmod>2013-07-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -107,6 +126,16 @@
     <url>
     
       <loc>https://yardsale8.github.io/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://yardsale8.github.io/tags/dscied/</loc>
+      <lastmod>2017-12-14T00:00:00-06:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -157,16 +186,6 @@
     
       <loc>https://yardsale8.github.io/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://yardsale8.github.io/tags/workshop/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

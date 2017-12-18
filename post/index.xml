@@ -10,5 +10,33 @@
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0600</lastBuildDate>
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title>Names &lt;del&gt;Don&#39;t Matter&lt;/del&gt; Totally Matter</title>
+      <link>https://yardsale8.github.io/post/name_matter/</link>
+      <pubDate>Thu, 14 Dec 2017 00:00:00 -0600</pubDate>
+      
+      <guid>https://yardsale8.github.io/post/name_matter/</guid>
+      <description>
+
+&lt;p&gt;Now more than ever, I try to add an element of programming in most courses, which ranges from simple function calls in R to using &lt;code&gt;dplyr&lt;/code&gt; as part of simulation.  At some point in each of these classes, I find myself making two points about variable names.&lt;/p&gt;
+
+&lt;h4 id=&#34;point-1-names-don-t-matter&#34;&gt;Point 1: Names don&amp;rsquo;t matter.&lt;/h4&gt;
+
+&lt;p&gt;It is important for students to know when they are required to use specific names (built-in function, functions from a library) and when they have the power to pick their own names.  When programming in Python, I have developed a set of naming habits.  For example, if I want to compute the monthly pay for a list of salaries, I would probably write the following.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;monthly_pay  = [salary/12 for salary in salaries]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Similarly, when processing a table, I am likely to use &lt;code&gt;for row in table&lt;/code&gt; in a loop or comprehension.  I have found that some students will begin to think that they &lt;em&gt;need&lt;/em&gt; to use the name &lt;code&gt;row&lt;/code&gt; when working with a table.  &lt;strong&gt;We need to make sure students understand when they hold the power to select a name.&lt;/strong&gt;  It is entirely possible to perform the above computation as follows,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;unicorn  = [bob/12 for bob in snowflakes]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;but that brings us to the second point.&lt;/p&gt;
+
+&lt;h4 id=&#34;point-2-names-totally-matter&#34;&gt;Point 2: Names totally matter.&lt;/h4&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

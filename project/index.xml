@@ -26,7 +26,7 @@
       
       <guid>https://yardsale8.github.io/project/deep-learning/</guid>
       <description>&lt;p&gt;This module aims to add lazy evaluation of tables through Python
-generators/interators.  The project is inspired by Spark SQL and the dylyr R
+generators/iterators.  The project is inspired by Spark SQL and the dplyr R
 package, which both provide nice tools for processing tables.&lt;/p&gt;
 </description>
     </item>
