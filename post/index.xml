@@ -11,30 +11,130 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Names &lt;del&gt;Don&#39;t Matter&lt;/del&gt; Totally Matter</title>
+      <title>Names Matter</title>
       <link>https://yardsale8.github.io/post/name_matter/</link>
       <pubDate>Thu, 14 Dec 2017 00:00:00 -0600</pubDate>
       
       <guid>https://yardsale8.github.io/post/name_matter/</guid>
       <description>
 
-&lt;p&gt;Now more than ever, I try to add an element of programming in most courses, which ranges from simple function calls in R to using &lt;code&gt;dplyr&lt;/code&gt; as part of simulation.  At some point in each of these classes, I find myself making two points about variable names.&lt;/p&gt;
+&lt;p&gt;Now more than ever, I try to add an element of programming in most courses.
+Content can range from simple function calls in R to using &lt;code&gt;dplyr&lt;/code&gt; as part of
+probability simulation.  At some point in each of course, I find myself
+making two points about variable names.&lt;/p&gt;
 
-&lt;h4 id=&#34;point-1-names-don-t-matter&#34;&gt;Point 1: Names don&amp;rsquo;t matter.&lt;/h4&gt;
+&lt;h2 id=&#34;point-1-names-don-t-matter&#34;&gt;Point 1: Names don&amp;rsquo;t matter.&lt;/h2&gt;
 
-&lt;p&gt;It is important for students to know when they are required to use specific names (built-in function, functions from a library) and when they have the power to pick their own names.  When programming in Python, I have developed a set of naming habits.  For example, if I want to compute the monthly pay for a list of salaries, I would probably write the following.&lt;/p&gt;
+&lt;p&gt;It is important for students to know when they are required to use specific
+names (e.g. built-in functions or functions imported from a library) and &lt;em&gt;when
+they have the power to pick their own names&lt;/em&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;monthly_pay  = [salary/12 for salary in salaries]
+&lt;p&gt;When programming in Python, I have developed a set of naming habits.  For
+example, if I want to compute the monthly pay for a list of salaries, I would
+probably write the following.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;monthly_pay  = [salary/12 for salary in salaries] 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Similarly, when processing a table, I am likely to use &lt;code&gt;for row in table&lt;/code&gt; in a loop or comprehension.  I have found that some students will begin to think that they &lt;em&gt;need&lt;/em&gt; to use the name &lt;code&gt;row&lt;/code&gt; when working with a table.  &lt;strong&gt;We need to make sure students understand when they hold the power to select a name.&lt;/strong&gt;  It is entirely possible to perform the above computation as follows,&lt;/p&gt;
+&lt;p&gt;Over the years, I have found that some students are confused by my naming
+habits and will begin to think that they &lt;em&gt;need&lt;/em&gt; to use the name &lt;code&gt;row&lt;/code&gt; when
+working with a table, which is the thrust of the first point: &lt;strong&gt;The programmer
+holds the power to select names.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;unicorn  = [bob/12 for bob in snowflakes]
+&lt;p&gt;It is entirely possible to perform the above computation as follows,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;unicorn  = [bob/12 for bob in snowflakes] 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and a mathematician would probably be happy with&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;z = [x/12 for x in y] 
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;but that brings us to the second point.&lt;/p&gt;
 
-&lt;h4 id=&#34;point-2-names-totally-matter&#34;&gt;Point 2: Names totally matter.&lt;/h4&gt;
+&lt;h2 id=&#34;point-2-names-totally-matter&#34;&gt;Point 2: Names totally matter.&lt;/h2&gt;
+
+&lt;p&gt;While the &lt;code&gt;unicorn&lt;/code&gt;, &lt;code&gt;z&lt;/code&gt; and &lt;code&gt;monthly_pay&lt;/code&gt; all represent the result of the
+same computation, stylistically the first is much better than the second and
+third.  While it is important that a programming student appreciate the
+freedom of name selection, it is even more important that they learn to use
+&lt;em&gt;quality names&lt;/em&gt;. In &lt;em&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Literate_programming&#34; target=&#34;_blank&#34;&gt;Literate
+Programming&lt;/a&gt;&lt;/em&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Donald_Knuth&#34; target=&#34;_blank&#34;&gt;Donald
+Knuth&lt;/a&gt; made the following
+important point about writing programs.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Let us change our traditional attitude to the construction of programs:
+Instead of imagining that our main task is to instruct a computer what to do,
+let us concentrate rather on explaining to human beings what we want a
+computer to do.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The first step in communicating our intent to other
+programmers is to select appropriate names. This is why I believe that the
+loop variable for &lt;code&gt;table&lt;/code&gt; should be &lt;code&gt;row&lt;/code&gt;s or that a &lt;code&gt;text&lt;/code&gt; consist of &lt;code&gt;word&lt;/code&gt;s.
+In fact, when working with nested data structures, the names should be
+related to the levels of abstraction.&lt;/p&gt;
+
+&lt;h2 id=&#34;levels-of-abstraction&#34;&gt;Levels of abstraction&lt;/h2&gt;
+
+&lt;p&gt;A wikipedia defines a
+&lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Abstraction_(software_engineering)#Levels_of_abstraction&#34; target=&#34;_blank&#34;&gt;level of abstraction&lt;/a&gt;&lt;/strong&gt;
+ as follows.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Computer science commonly presents levels (or, less commonly, layers) of
+abstraction, wherein each level represents a different model of the same
+information and processes, but with varying amounts of detail. Each level uses
+a system of expression involving a unique set of objects and compositions that
+apply only to a particular domain.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For example, when processing an image in Python, we might represent
+pictures as an array of RGB tuples.  In this case, the image can be
+thought of as having the following levels.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://yardsale8.github.io/img/levels_of_abstraction.png&#34; alt=&#34;Levels of abstraction&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The outer-most level is a matrix that consists of rows, followed by rows that
+consist of RGB tuples and the RGB tuples consist of 8 bit integers.&lt;br /&gt;
+Knuth states that&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The psychological profiling [of a programmer] is mostly
+the ability to shift levels of abstraction, from low level to high level. To
+see something in the small and to see something in the large.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Notice that an important part of of describing the levels is picking a good
+name for each level. By encouraging our students to use names that describe
+each level of abstraction, we are helping them practice the most important
+skill in programming: abstraction.&lt;/p&gt;
+
+&lt;h2 id=&#34;it-s-all-in-a-name&#34;&gt;It&amp;rsquo;s ALL in a name!&lt;/h2&gt;
+
+&lt;p&gt;In his answer to
+&lt;a href=&#34;https://stackoverflow.com/questions/21220155/what-does-abstraction-mean-in-programming&#34; target=&#34;_blank&#34;&gt;this question&lt;/a&gt;,
+&lt;a href=&#34;https://stackoverflow.com/&#34; target=&#34;_blank&#34;&gt;stackoverflow&lt;/a&gt; user
+&lt;a href=&#34;https://stackoverflow.com/users/890242/miraculixx&#34; target=&#34;_blank&#34;&gt;miraculixx&lt;/a&gt; gives the following simple definition of abstraction:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Abstracting something means to &lt;em&gt;give names&lt;/em&gt; to things, so that the name captures
+the core of what a function or a whole program does.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Even simple programs can become complex, and the tool that a programmer wields
+in the battle against complexity is abstraction.  With proper abstractions, a
+complex computation can be broken into small and easy to understand
+components.  These components are then composed into higher level
+abstractions, which are also short and easy to understand. This process is
+applied over and over until the program is complete.  The form of the
+abstraction, whether it be functional or object- oriented, is not as important
+as the ability to package our computations in bite-sized chucks.&lt;/p&gt;
+
+&lt;p&gt;And since applying abstractions is &lt;em&gt;giving names&lt;/em&gt; to computations, writing quality
+programs is quite literally all in the names.&lt;/p&gt;
 </description>
     </item>
     

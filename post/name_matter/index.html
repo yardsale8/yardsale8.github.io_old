@@ -64,7 +64,7 @@
   
   <meta property="og:site_name" content="lazydata.stream">
   <meta property="og:url" content="https://yardsale8.github.io/post/name_matter/">
-  <meta property="og:title" content="Names &lt;del&gt;Don&#39;t Matter&lt;/del&gt; Totally Matter | lazydata.stream">
+  <meta property="og:title" content="Names Matter | lazydata.stream">
   <meta property="og:description" content="">
   <meta property="og:locale" content="en-us">
   
@@ -75,7 +75,7 @@
 
   
 
-  <title>Names &lt;del&gt;Don&#39;t Matter&lt;/del&gt; Totally Matter | lazydata.stream</title>
+  <title>Names Matter | lazydata.stream</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
@@ -173,7 +173,7 @@
 
   <div class="article-container">
     <div class="article-inner">
-      <h1 itemprop="name">Names &lt;del&gt;Don&#39;t Matter&lt;/del&gt; Totally Matter</h1>
+      <h1 itemprop="name">Names Matter</h1>
 
       
 
@@ -189,7 +189,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    4 min read
   </span>
   
 
@@ -204,7 +204,7 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Names%20%3cdel%3eDon%27t%20Matter%3c%2fdel%3e%20Totally%20Matter&amp;url=https%3a%2f%2fyardsale8.github.io%2fpost%2fname_matter%2f"
+         href="https://twitter.com/intent/tweet?text=Names%20Matter&amp;url=https%3a%2f%2fyardsale8.github.io%2fpost%2fname_matter%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
@@ -218,21 +218,21 @@
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyardsale8.github.io%2fpost%2fname_matter%2f&amp;title=Names%20%3cdel%3eDon%27t%20Matter%3c%2fdel%3e%20Totally%20Matter"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyardsale8.github.io%2fpost%2fname_matter%2f&amp;title=Names%20Matter"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fyardsale8.github.io%2fpost%2fname_matter%2f&amp;title=Names%20%3cdel%3eDon%27t%20Matter%3c%2fdel%3e%20Totally%20Matter"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fyardsale8.github.io%2fpost%2fname_matter%2f&amp;title=Names%20Matter"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Names%20%3cdel%3eDon%27t%20Matter%3c%2fdel%3e%20Totally%20Matter&amp;body=https%3a%2f%2fyardsale8.github.io%2fpost%2fname_matter%2f">
+         href="mailto:?subject=Names%20Matter&amp;body=https%3a%2f%2fyardsale8.github.io%2fpost%2fname_matter%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -248,23 +248,123 @@
       <div class="article-style" itemprop="articleBody">
         
 
-<p>Now more than ever, I try to add an element of programming in most courses, which ranges from simple function calls in R to using <code>dplyr</code> as part of simulation.  At some point in each of these classes, I find myself making two points about variable names.</p>
+<p>Now more than ever, I try to add an element of programming in most courses.
+Content can range from simple function calls in R to using <code>dplyr</code> as part of
+probability simulation.  At some point in each of course, I find myself
+making two points about variable names.</p>
 
-<h4 id="point-1-names-don-t-matter">Point 1: Names don&rsquo;t matter.</h4>
+<h2 id="point-1-names-don-t-matter">Point 1: Names don&rsquo;t matter.</h2>
 
-<p>It is important for students to know when they are required to use specific names (built-in function, functions from a library) and when they have the power to pick their own names.  When programming in Python, I have developed a set of naming habits.  For example, if I want to compute the monthly pay for a list of salaries, I would probably write the following.</p>
+<p>It is important for students to know when they are required to use specific
+names (e.g. built-in functions or functions imported from a library) and <em>when
+they have the power to pick their own names</em>.</p>
 
-<pre><code class="language-python">monthly_pay  = [salary/12 for salary in salaries]
+<p>When programming in Python, I have developed a set of naming habits.  For
+example, if I want to compute the monthly pay for a list of salaries, I would
+probably write the following.</p>
+
+<pre><code class="language-python">monthly_pay  = [salary/12 for salary in salaries] 
 </code></pre>
 
-<p>Similarly, when processing a table, I am likely to use <code>for row in table</code> in a loop or comprehension.  I have found that some students will begin to think that they <em>need</em> to use the name <code>row</code> when working with a table.  <strong>We need to make sure students understand when they hold the power to select a name.</strong>  It is entirely possible to perform the above computation as follows,</p>
+<p>Over the years, I have found that some students are confused by my naming
+habits and will begin to think that they <em>need</em> to use the name <code>row</code> when
+working with a table, which is the thrust of the first point: <strong>The programmer
+holds the power to select names.</strong></p>
 
-<pre><code class="language-python">unicorn  = [bob/12 for bob in snowflakes]
+<p>It is entirely possible to perform the above computation as follows,</p>
+
+<pre><code class="language-python">unicorn  = [bob/12 for bob in snowflakes] 
+</code></pre>
+
+<p>and a mathematician would probably be happy with</p>
+
+<pre><code class="language-python">z = [x/12 for x in y] 
 </code></pre>
 
 <p>but that brings us to the second point.</p>
 
-<h4 id="point-2-names-totally-matter">Point 2: Names totally matter.</h4>
+<h2 id="point-2-names-totally-matter">Point 2: Names totally matter.</h2>
+
+<p>While the <code>unicorn</code>, <code>z</code> and <code>monthly_pay</code> all represent the result of the
+same computation, stylistically the first is much better than the second and
+third.  While it is important that a programming student appreciate the
+freedom of name selection, it is even more important that they learn to use
+<em>quality names</em>. In <em><a href="https://en.wikipedia.org/wiki/Literate_programming" target="_blank">Literate
+Programming</a></em>, <a href="https://en.wikipedia.org/wiki/Donald_Knuth" target="_blank">Donald
+Knuth</a> made the following
+important point about writing programs.</p>
+
+<blockquote>
+<p>Let us change our traditional attitude to the construction of programs:
+Instead of imagining that our main task is to instruct a computer what to do,
+let us concentrate rather on explaining to human beings what we want a
+computer to do.</p>
+</blockquote>
+
+<p>The first step in communicating our intent to other
+programmers is to select appropriate names. This is why I believe that the
+loop variable for <code>table</code> should be <code>row</code>s or that a <code>text</code> consist of <code>word</code>s.
+In fact, when working with nested data structures, the names should be
+related to the levels of abstraction.</p>
+
+<h2 id="levels-of-abstraction">Levels of abstraction</h2>
+
+<p>A wikipedia defines a
+<strong><a href="https://en.wikipedia.org/wiki/Abstraction_(software_engineering)#Levels_of_abstraction" target="_blank">level of abstraction</a></strong>
+ as follows.</p>
+
+<blockquote>
+<p>Computer science commonly presents levels (or, less commonly, layers) of
+abstraction, wherein each level represents a different model of the same
+information and processes, but with varying amounts of detail. Each level uses
+a system of expression involving a unique set of objects and compositions that
+apply only to a particular domain.</p>
+</blockquote>
+
+<p>For example, when processing an image in Python, we might represent
+pictures as an array of RGB tuples.  In this case, the image can be
+thought of as having the following levels.</p>
+
+<p><img src="/img/levels_of_abstraction.png" alt="Levels of abstraction" /></p>
+
+<p>The outer-most level is a matrix that consists of rows, followed by rows that
+consist of RGB tuples and the RGB tuples consist of 8 bit integers.<br />
+Knuth states that</p>
+
+<blockquote>
+<p>The psychological profiling [of a programmer] is mostly
+the ability to shift levels of abstraction, from low level to high level. To
+see something in the small and to see something in the large.</p>
+</blockquote>
+
+<p>Notice that an important part of of describing the levels is picking a good
+name for each level. By encouraging our students to use names that describe
+each level of abstraction, we are helping them practice the most important
+skill in programming: abstraction.</p>
+
+<h2 id="it-s-all-in-a-name">It&rsquo;s ALL in a name!</h2>
+
+<p>In his answer to
+<a href="https://stackoverflow.com/questions/21220155/what-does-abstraction-mean-in-programming" target="_blank">this question</a>,
+<a href="https://stackoverflow.com/" target="_blank">stackoverflow</a> user
+<a href="https://stackoverflow.com/users/890242/miraculixx" target="_blank">miraculixx</a> gives the following simple definition of abstraction:</p>
+
+<blockquote>
+<p>Abstracting something means to <em>give names</em> to things, so that the name captures
+the core of what a function or a whole program does.</p>
+</blockquote>
+
+<p>Even simple programs can become complex, and the tool that a programmer wields
+in the battle against complexity is abstraction.  With proper abstractions, a
+complex computation can be broken into small and easy to understand
+components.  These components are then composed into higher level
+abstractions, which are also short and easy to understand. This process is
+applied over and over until the program is complete.  The form of the
+abstraction, whether it be functional or object- oriented, is not as important
+as the ability to package our computations in bite-sized chucks.</p>
+
+<p>And since applying abstractions is <em>giving names</em> to computations, writing quality
+programs is quite literally all in the names.</p>
 
       </div>
 
