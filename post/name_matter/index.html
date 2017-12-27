@@ -248,30 +248,36 @@
       <div class="article-style" itemprop="articleBody">
         
 
-<p>Now more than ever, I try to add an element of programming in most courses.
-Content can range from simple function calls in R to using <code>dplyr</code> as part of
-probability simulation.  At some point in each of course, I find myself
-making two points about variable names.</p>
+<p>I try to add an element of programming in most courses, with content ranging
+from simple function calls in R to using <code>dplyr</code> to manipulate data or perform
+probability simulation.  At some point in each course, I find myself making
+two points about variable names.</p>
 
 <h2 id="point-1-names-don-t-matter">Point 1: Names don&rsquo;t matter.</h2>
+
+<p>I find that students need some clarification about the names I tend to use in
+programs. For example when programming in Python,  if I want to compute the
+monthly pay for a list of salaries, I would probably write the following</p>
+
+<pre><code class="language-python">monthly_pay  = [salary/12 for salary in salaries] 
+</code></pre>
+
+<p>and computing the row sums of a table would likely be performed using</p>
+
+<pre><code class="language-python">row_sums = [sum(row) for row in table]
+</code></pre>
+
+<p>Over the years, I have found that some students are confused by my naming
+habits and will begin to think that they <em>need</em> to use the name <code>salary</code> when
+iterating over <code>saleries</code> or <code>row</code> when working with a <code>table</code>, which brings
+us to the thrust of the first point: <strong>The programmer holds the power to
+select names.</strong></p>
 
 <p>It is important for students to know when they are required to use specific
 names (e.g. built-in functions or functions imported from a library) and <em>when
 they have the power to pick their own names</em>.</p>
 
-<p>When programming in Python, I have developed a set of naming habits.  For
-example, if I want to compute the monthly pay for a list of salaries, I would
-probably write the following.</p>
-
-<pre><code class="language-python">monthly_pay  = [salary/12 for salary in salaries] 
-</code></pre>
-
-<p>Over the years, I have found that some students are confused by my naming
-habits and will begin to think that they <em>need</em> to use the name <code>row</code> when
-working with a table, which is the thrust of the first point: <strong>The programmer
-holds the power to select names.</strong></p>
-
-<p>It is entirely possible to perform the above computation as follows,</p>
+<p>It is entirely possible to perform the first computation using</p>
 
 <pre><code class="language-python">unicorn  = [bob/12 for bob in snowflakes] 
 </code></pre>
@@ -281,15 +287,17 @@ holds the power to select names.</strong></p>
 <pre><code class="language-python">z = [x/12 for x in y] 
 </code></pre>
 
-<p>but that brings us to the second point.</p>
+<p>So which code-slice is best?  Clearly, the first example is better as it not
+only conveys the structure of the computation, but also the context, which the
+second point.</p>
 
 <h2 id="point-2-names-totally-matter">Point 2: Names totally matter.</h2>
 
-<p>While the <code>unicorn</code>, <code>z</code> and <code>monthly_pay</code> all represent the result of the
-same computation, stylistically the first is much better than the second and
-third.  While it is important that a programming student appreciate the
-freedom of name selection, it is even more important that they learn to use
-<em>quality names</em>. In <em><a href="https://en.wikipedia.org/wiki/Literate_programming" target="_blank">Literate
+<p>While the <code>unicorn</code>, <code>z</code> and <code>monthly_pay</code> all represent the same computation,
+stylistically the first code-slice is much better than the second and third.
+While it is important that a programming student appreciate the freedom of
+name selection, it is even more important that they learn to use <em>quality
+names</em>. In <em><a href="https://en.wikipedia.org/wiki/Literate_programming" target="_blank">Literate
 Programming</a></em>, <a href="https://en.wikipedia.org/wiki/Donald_Knuth" target="_blank">Donald
 Knuth</a> made the following
 important point about writing programs.</p>
@@ -301,15 +309,16 @@ let us concentrate rather on explaining to human beings what we want a
 computer to do.</p>
 </blockquote>
 
-<p>The first step in communicating our intent to other
-programmers is to select appropriate names. This is why I believe that the
-loop variable for <code>table</code> should be <code>row</code>s or that a <code>text</code> consist of <code>word</code>s.
-In fact, when working with nested data structures, the names should be
-related to the levels of abstraction.</p>
+<p>I have come to see his point as one of the first principles of programming.
+The first step in communicating our intent to other programmers is to select
+appropriate names. This is why I believe that the loop variable for <code>table</code>
+should be <code>row</code>s or that a <code>text</code> consist of <code>word</code>s. In fact, when working
+with nested data structures, the names should be related to the levels of
+abstraction.</p>
 
 <h2 id="levels-of-abstraction">Levels of abstraction</h2>
 
-<p>A wikipedia defines a
+<p>Wikipedia defines a
 <strong><a href="https://en.wikipedia.org/wiki/Abstraction_(software_engineering)#Levels_of_abstraction" target="_blank">level of abstraction</a></strong>
  as follows.</p>
 
@@ -337,10 +346,10 @@ the ability to shift levels of abstraction, from low level to high level. To
 see something in the small and to see something in the large.</p>
 </blockquote>
 
-<p>Notice that an important part of of describing the levels is picking a good
-name for each level. By encouraging our students to use names that describe
-each level of abstraction, we are helping them practice the most important
-skill in programming: abstraction.</p>
+<p>Notice that an important part of describing the levels of abstraction is
+picking a good name for each level. By encouraging our students to use names
+that describe each level of abstraction, we are helping them practice one of
+the most important skill in programming: abstraction.</p>
 
 <h2 id="it-s-all-in-a-name">It&rsquo;s ALL in a name!</h2>
 

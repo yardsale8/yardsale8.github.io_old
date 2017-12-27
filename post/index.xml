@@ -18,30 +18,36 @@
       <guid>https://yardsale8.github.io/post/name_matter/</guid>
       <description>
 
-&lt;p&gt;Now more than ever, I try to add an element of programming in most courses.
-Content can range from simple function calls in R to using &lt;code&gt;dplyr&lt;/code&gt; as part of
-probability simulation.  At some point in each of course, I find myself
-making two points about variable names.&lt;/p&gt;
+&lt;p&gt;I try to add an element of programming in most courses, with content ranging
+from simple function calls in R to using &lt;code&gt;dplyr&lt;/code&gt; to manipulate data or perform
+probability simulation.  At some point in each course, I find myself making
+two points about variable names.&lt;/p&gt;
 
 &lt;h2 id=&#34;point-1-names-don-t-matter&#34;&gt;Point 1: Names don&amp;rsquo;t matter.&lt;/h2&gt;
+
+&lt;p&gt;I find that students need some clarification about the names I tend to use in
+programs. For example when programming in Python,  if I want to compute the
+monthly pay for a list of salaries, I would probably write the following&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;monthly_pay  = [salary/12 for salary in salaries] 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and computing the row sums of a table would likely be performed using&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;row_sums = [sum(row) for row in table]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Over the years, I have found that some students are confused by my naming
+habits and will begin to think that they &lt;em&gt;need&lt;/em&gt; to use the name &lt;code&gt;salary&lt;/code&gt; when
+iterating over &lt;code&gt;saleries&lt;/code&gt; or &lt;code&gt;row&lt;/code&gt; when working with a &lt;code&gt;table&lt;/code&gt;, which brings
+us to the thrust of the first point: &lt;strong&gt;The programmer holds the power to
+select names.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;It is important for students to know when they are required to use specific
 names (e.g. built-in functions or functions imported from a library) and &lt;em&gt;when
 they have the power to pick their own names&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;When programming in Python, I have developed a set of naming habits.  For
-example, if I want to compute the monthly pay for a list of salaries, I would
-probably write the following.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;monthly_pay  = [salary/12 for salary in salaries] 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Over the years, I have found that some students are confused by my naming
-habits and will begin to think that they &lt;em&gt;need&lt;/em&gt; to use the name &lt;code&gt;row&lt;/code&gt; when
-working with a table, which is the thrust of the first point: &lt;strong&gt;The programmer
-holds the power to select names.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;It is entirely possible to perform the above computation as follows,&lt;/p&gt;
+&lt;p&gt;It is entirely possible to perform the first computation using&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;unicorn  = [bob/12 for bob in snowflakes] 
 &lt;/code&gt;&lt;/pre&gt;
@@ -51,15 +57,17 @@ holds the power to select names.&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;z = [x/12 for x in y] 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;but that brings us to the second point.&lt;/p&gt;
+&lt;p&gt;So which code-slice is best?  Clearly, the first example is better as it not
+only conveys the structure of the computation, but also the context, which the
+second point.&lt;/p&gt;
 
 &lt;h2 id=&#34;point-2-names-totally-matter&#34;&gt;Point 2: Names totally matter.&lt;/h2&gt;
 
-&lt;p&gt;While the &lt;code&gt;unicorn&lt;/code&gt;, &lt;code&gt;z&lt;/code&gt; and &lt;code&gt;monthly_pay&lt;/code&gt; all represent the result of the
-same computation, stylistically the first is much better than the second and
-third.  While it is important that a programming student appreciate the
-freedom of name selection, it is even more important that they learn to use
-&lt;em&gt;quality names&lt;/em&gt;. In &lt;em&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Literate_programming&#34; target=&#34;_blank&#34;&gt;Literate
+&lt;p&gt;While the &lt;code&gt;unicorn&lt;/code&gt;, &lt;code&gt;z&lt;/code&gt; and &lt;code&gt;monthly_pay&lt;/code&gt; all represent the same computation,
+stylistically the first code-slice is much better than the second and third.
+While it is important that a programming student appreciate the freedom of
+name selection, it is even more important that they learn to use &lt;em&gt;quality
+names&lt;/em&gt;. In &lt;em&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Literate_programming&#34; target=&#34;_blank&#34;&gt;Literate
 Programming&lt;/a&gt;&lt;/em&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Donald_Knuth&#34; target=&#34;_blank&#34;&gt;Donald
 Knuth&lt;/a&gt; made the following
 important point about writing programs.&lt;/p&gt;
@@ -71,15 +79,16 @@ let us concentrate rather on explaining to human beings what we want a
 computer to do.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;The first step in communicating our intent to other
-programmers is to select appropriate names. This is why I believe that the
-loop variable for &lt;code&gt;table&lt;/code&gt; should be &lt;code&gt;row&lt;/code&gt;s or that a &lt;code&gt;text&lt;/code&gt; consist of &lt;code&gt;word&lt;/code&gt;s.
-In fact, when working with nested data structures, the names should be
-related to the levels of abstraction.&lt;/p&gt;
+&lt;p&gt;I have come to see his point as one of the first principles of programming.
+The first step in communicating our intent to other programmers is to select
+appropriate names. This is why I believe that the loop variable for &lt;code&gt;table&lt;/code&gt;
+should be &lt;code&gt;row&lt;/code&gt;s or that a &lt;code&gt;text&lt;/code&gt; consist of &lt;code&gt;word&lt;/code&gt;s. In fact, when working
+with nested data structures, the names should be related to the levels of
+abstraction.&lt;/p&gt;
 
 &lt;h2 id=&#34;levels-of-abstraction&#34;&gt;Levels of abstraction&lt;/h2&gt;
 
-&lt;p&gt;A wikipedia defines a
+&lt;p&gt;Wikipedia defines a
 &lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Abstraction_(software_engineering)#Levels_of_abstraction&#34; target=&#34;_blank&#34;&gt;level of abstraction&lt;/a&gt;&lt;/strong&gt;
  as follows.&lt;/p&gt;
 
@@ -107,10 +116,10 @@ the ability to shift levels of abstraction, from low level to high level. To
 see something in the small and to see something in the large.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Notice that an important part of of describing the levels is picking a good
-name for each level. By encouraging our students to use names that describe
-each level of abstraction, we are helping them practice the most important
-skill in programming: abstraction.&lt;/p&gt;
+&lt;p&gt;Notice that an important part of describing the levels of abstraction is
+picking a good name for each level. By encouraging our students to use names
+that describe each level of abstraction, we are helping them practice one of
+the most important skill in programming: abstraction.&lt;/p&gt;
 
 &lt;h2 id=&#34;it-s-all-in-a-name&#34;&gt;It&amp;rsquo;s ALL in a name!&lt;/h2&gt;
 
